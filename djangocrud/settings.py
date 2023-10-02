@@ -127,11 +127,11 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 # Following settings only make sense on production and may break development environments.
-if not DEBUG:
+#if not DEBUG:
 
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 LOGIN_URL = '/signin'
 
